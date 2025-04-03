@@ -24,9 +24,9 @@ const char* password = "";
 // Thông tin email
 #define SMTP_HOST "smtp.gmail.com"
 #define SMTP_PORT 465
-#define AUTHOR_EMAIL "lamho.010103@gmail.com"
-#define AUTHOR_PASSWORD "rfao vshb twbg qlkh" 
-#define RECIPIENT_EMAIL "lamho.010103@gmail.com"
+#define AUTHOR_EMAIL ""
+#define AUTHOR_PASSWORD "" 
+#define RECIPIENT_EMAIL ""
 
 // Cấu hình GPIO
 const int PIR_PIN = 15;
