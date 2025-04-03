@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Hồ Xuân Lãm",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 4.7, "left": 4.6, "attrs": {} },
+    {
+      "type": "wokwi-pir-motion-sensor",
+      "id": "pir1",
+      "top": -69.2,
+      "left": -161.78,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 21.87,
+      "left": -68.87,
+      "attrs": { "color": "red" }
+    },
+    { "type": "wokwi-buzzer", "id": "buzzer1", "top": -84, "left": 155.4, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "pir1:GND", "esp:GND.2", "black", [ "v126.07", "h107.64" ] ],
+    [ "pir1:VCC", "esp:VIN", "red", [ "v136.73", "h131.77" ] ],
+    [ "led1:A", "esp:D13", "green", [ "v75.66", "h50.7" ] ],
+    [ "led1:C", "esp:GND.2", "black", [ "v84.33", "h58.7" ] ],
+    [ "pir1:OUT", "esp:D15", "green", [ "v188.73", "h238.03", "v-71.33" ] ],
+    [ "buzzer1:GND", "esp:GND.2", "black", [ "v60", "h30" ] ],
+    [ "buzzer1:VCC", "esp:VIN", "red", [ "v70", "h40" ] ],
+    [ "buzzer1:SIG", "esp:D12", "blue", [ "v80", "h50" ] ],
+    [ "buzzer1:1", "esp:D12", "green", [ "v211.2", "h-192", "v-76.1" ] ],
+    [ "buzzer1:2", "esp:GND.1", "red", [ "h-0.4", "v153.7" ] ]
+  ],
+  "dependencies": {}
+}
